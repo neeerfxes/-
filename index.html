@@ -35,14 +35,56 @@
 
   <!-- Hero -->
 <section class="hero" id="consul">
-<img class="hero-img" src="img/advocat.png" alt="Фон" />
+  <img class="hero-img" src="img/advocat.png" alt="Фон" />
   <div class="container">
     <h2>Евгения Александровна Бурцева</h2>
     <p class="hero-subtitle">Ваш личный адвокат — с доверием, опытом и результатом</p>
-    <button class="btn">Записаться на консультацию</button>
+    <button class="open-modal">Записаться на консультацию</button>
+
+
   </div>
 </section>
 
+  <!-- модольное окно -->
+
+    <div class="modal-overlay">
+      <div class="modal">
+        <h2>Оставьте заявку</h2>
+        <p>Заполните форму, и мы свяжемся с вами.</p>
+
+        <div class="menu">
+          <h2 class="heading"><span>Contact</span> Us</h2>
+          <div class="row">
+
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="dea3b3f9-bb2f-4beb-871f-b73b897cc164">
+
+              <span></span>
+              <input type="text" name="name" class="box" required placeholder="Enter your name..." autocomplete="off">
+
+              <span></span>
+              <input type="email" name="email" class="box" required placeholder="Enter your email..." autocomplete="off">
+
+              <span></span>
+              <input type="tel" name="phone" class="box" required placeholder="Your phone number" pattern="^\+?[0-9\s\-]{10,15}$" autocomplete="off">
+
+              <div class="gender">
+                <input type="radio" name="gender" id="male" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Female</label>
+              </div>
+
+              <div class="modal-buttons">
+  <input type="submit" value="Send data" class="btn" name="send">
+  <button class="btn close-modal">Close</button>
+</div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
   <!-- Mission -->
   <section id="mission" class="section gradient-bg">
