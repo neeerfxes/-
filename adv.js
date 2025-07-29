@@ -87,6 +87,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
   
-//появление окна и отпрвление данных на почту
+//появление окна
+
+document.querySelector('.open-modal').addEventListener('click', () => {
+    document.querySelector('.modal-overlay').classList.add('active');
+  });
+
+  document.querySelector('.close-modal').addEventListener('click', () => {
+    document.querySelector('.modal-overlay').classList.remove('active');
+  });
+
+  document.querySelector('.modal-overlay').addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) {
+      document.querySelector('.modal-overlay').classList.remove('active');
+    }
+  });
 
 
